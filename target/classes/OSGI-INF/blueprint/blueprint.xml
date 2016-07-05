@@ -10,25 +10,39 @@
             <log id="_log1" message="${header.operationName}"/>
             <choice id="_choice1">
                 <when id="_when1">
-                    <simple>${header.operationName} == "getRepos"</simple>
+                    <simple>${header.operationName} == "repositories"</simple>
                     <bean
                         beanType="mx.redhat.fuse.processor.BpmProxyService"
                         id="_bean1" method="getRepos" ref="proxyProcessor"/>
                     <log id="_log1" message="Repos Done"/>
                 </when>
                 <when id="_when2">
-                    <simple>${header.operationName} == "getRuntime"</simple>
+                    <simple>${header.operationName} == "taskQuery"</simple>
                     <bean
                         beanType="mx.redhat.fuse.processor.BpmProxyService"
-                        id="_bean1" method="getRuntime" ref="proxyProcessor"/>
-                    <log id="_log1" message="Runtime Done"/>
+                        id="_bean2" method="taskQuery" ref="proxyProcessor"/>
+                    <log id="_log2" message="Repos Done"/>
                 </when>
                 <when id="_when3">
-                    <simple>${header.operationName} == "getDeployment"</simple>
+                    <simple>${header.operationName} == "queryRuntimeTask"</simple>
                     <bean
                         beanType="mx.redhat.fuse.processor.BpmProxyService"
-                        id="_bean1" method="getDeployment" ref="proxyProcessor"/>
-                    <log id="_log1" message="Runtime Done"/>
+                        id="_bean3" method="queryRuntimeTask" ref="proxyProcessor"/>
+                    <log id="_log3" message="Repos Done"/>
+                </when>
+                <when id="_when4">
+                    <simple>${header.operationName} == "taskClaim"</simple>
+                    <bean
+                        beanType="mx.redhat.fuse.processor.BpmProxyService"
+                        id="_bean3" method="taskClaim" ref="proxyProcessor"/>
+                    <log id="_log3" message="Repos Done"/>
+                </when>
+                <when id="_when4">
+                    <simple>${header.operationName} == "runtimeWithvarsStart"</simple>
+                    <bean
+                        beanType="mx.redhat.fuse.processor.BpmProxyService"
+                        id="_bean3" method="runtimeWithvarsStart" ref="proxyProcessor"/>
+                    <log id="_log3" message="Repos Done"/>
                 </when>
             </choice>
         </route>

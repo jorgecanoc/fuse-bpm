@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1467562829480
+Bnd-LastModified: 1467728546503
 Build-Jdk: 1.8.0_91
 Built-By: jcano
 Bundle-ManifestVersion: 2
@@ -8,17 +8,16 @@ Bundle-SymbolicName: camel-archetype-blueprint
 Bundle-Version: 2.15.1.redhat-620133
 Created-By: Apache Maven Bundle Plugin
 Export-Package: mx.redhat.fuse.camel.blueprint;version="2.15.1.redhat-62
- 0133",mx.redhat.fuse.processor;uses:="javax.ws.rs.core,org.apache.log4j
- ,mx.redhat.fuse.service,org.apache.camel";version="2.15.1.redhat-620133
+ 0133",mx.redhat.fuse.processor;uses:="javax.ws.rs.core,mx.redhat.fuse.s
+ ervice,org.apache.log4j,org.apache.camel";version="2.15.1.redhat-620133
  ",mx.redhat.fuse.rest;uses:="javax.ws.rs,javax.ws.rs.core";version="2.1
  5.1.redhat-620133",mx.redhat.fuse.service;uses:="org.apache.commons.htt
  pclient.params,org.apache.commons.httpclient.methods,org.apache.commons
- .httpclient.auth,org.apache.commons.httpclient.cookie,org.apache.log4j,
- org.apache.commons.httpclient";version="2.15.1.redhat-620133"
+ .httpclient.auth,org.apache.log4j,org.apache.commons.httpclient";versio
+ n="2.15.1.redhat-620133"
 Import-Package: javax.ws.rs;version="[2.0,3)",javax.ws.rs.core;version="
  [2.0,3)",org.apache.camel;version="[2.12,3)",org.apache.commons.httpcli
- ent,org.apache.commons.httpclient.auth,org.apache.commons.httpclient.co
- okie,org.apache.commons.httpclient.methods,org.apache.commons.httpclien
- t.params,org.apache.log4j;version="[1.2,2)",org.osgi.service.blueprint;
- version="[1.0.0,2.0.0)"
+ ent,org.apache.commons.httpclient.auth,org.apache.commons.httpclient.me
+ thods,org.apache.commons.httpclient.params,org.apache.log4j;version="[1
+ .2,2)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
 Tool: Bnd-1.50.0

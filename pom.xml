@@ -19,16 +19,17 @@
 		<org.postgresql.version>9.2-1002-jdbc4</org.postgresql.version>
 		<org.apache.servicemix.bundles.version>1.4_3</org.apache.servicemix.bundles.version>
 		<commons.dbcp.version>1.4</commons.dbcp.version>
-		<fabric8.profile>redhat-forum-services</fabric8.profile>
+		<fabric8.profile>redhat-fuse-bpm</fabric8.profile>
 		<fabric8.parentProfiles>feature-camel feature-cxf</fabric8.parentProfiles>
-		<fabric8.bundles>wrap:mvn:commons-httpclient/commons-httpclient/3.1
-			mvn:com.google.code.gson/gson/2.2.4
-			wrap:mvn:org.postgresql/postgresql/9.2-1002-jdbc4
-			mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.4_3
-			mvn:commons-pool/commons-pool/1.5.4</fabric8.bundles>
+		<!-- <fabric8.bundles>wrap:mvn:commons-httpclient/commons-httpclient/3.1 -->
+		<!-- mvn:com.google.code.gson/gson/2.2.4 -->
+		<!-- wrap:mvn:org.postgresql/postgresql/9.2-1002-jdbc4 -->
+		<!-- mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.4_3 -->
+		<!-- mvn:commons-pool/commons-pool/1.5.4</fabric8.bundles> -->
 		<fabric8.features>camel-jackson camel-cxf fabric-cxf-registry
 			fabric-cxf fabric-zookeeper fabric-groups war camel-cxf camel-spring
-			camel-http camel-stream camel-jdbc camel-sql</fabric8.features>
+			camel-http camel-stream
+		</fabric8.features>
 		<fabric8.featureRepos>mvn:org.apache.camel.karaf/apache-camel/${version:camel}/xml/features</fabric8.featureRepos>
 	</properties>
 
@@ -253,15 +254,15 @@
 				<artifactId>maven-bundle-plugin</artifactId>
 				<version>2.3.7</version>
 				<extensions>true</extensions>
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>bundle-manifest</id> -->
-<!-- 						<phase>process-classes</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>manifest</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
+				<!-- <executions> -->
+				<!-- <execution> -->
+				<!-- <id>bundle-manifest</id> -->
+				<!-- <phase>process-classes</phase> -->
+				<!-- <goals> -->
+				<!-- <goal>manifest</goal> -->
+				<!-- </goals> -->
+				<!-- </execution> -->
+				<!-- </executions> -->
 				<configuration>
 					<instructions>
 						<Bundle-SymbolicName>camel-archetype-blueprint</Bundle-SymbolicName>

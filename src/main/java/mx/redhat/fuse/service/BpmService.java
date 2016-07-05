@@ -57,6 +57,20 @@ public class BpmService {
 	 * 
 	 * @param urlpath
 	 * @param method
+	 * @return
+	 * @throws Exception
+	 */
+	public static String getDataFromService(String urlpath, Map<String, Object> params) throws Exception {
+		// no params
+		return getDataFromService(BASE_URL + urlpath, "GET", params, false, USERNAME, PASSWORD);
+
+	}
+
+	/**
+	 * Call service (GET)
+	 * 
+	 * @param urlpath
+	 * @param method
 	 * @param username
 	 * @param password
 	 * @return
